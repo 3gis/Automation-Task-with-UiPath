@@ -1,0 +1,87 @@
+{
+  "name": "Practical Automation Task",
+  "description": "Automation task for RPA developer position",
+  "main": "Main Flowchart.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[22.4.1]",
+    "UiPath.UIAutomation.Activities": "[22.4.5]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.4.3.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "fae21817-f293-4958-9875-1f456d42cf23",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase02_ClickAssignLeave.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "8bbd0895-199b-409c-950f-1b83293b42b2",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase01_EnterAssignLeaveCredentials.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "29d1e53e-9b94-4a2e-8490-31f9d746c903",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase01_ClickAssignLeave.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "1267a792-5cde-40a3-9d65-de1eac23822a",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase01_GetBrowserURL.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "21d859f5-f96a-48b5-a8e0-98bd469ec770",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase01_LoginToWebsite.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "CSharp",
+  "entryPoints": [
+    {
+      "filePath": "Main Flowchart.xaml",
+      "uniqueId": "532cd1ef-8219-4cee-924c-66e5b8598275",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

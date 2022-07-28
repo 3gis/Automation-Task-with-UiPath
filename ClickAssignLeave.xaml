@@ -1,0 +1,279 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ClickAssignLeave" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_ChromeWindow" Type="InOutArgument(ui:Browser)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>820,742</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="45">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="In this sequence, the robot finds and click the Assign Leave button. If by some reason the robot cannot find the button, it will try the alternative way to go into the page" DisplayName="Clicking Assign Leave button sequence" sap:VirtualizedContainerService.HintSize="820,1955" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="intTimeout">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="5" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Startup Message" sap:VirtualizedContainerService.HintSize="778,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">"Clicking Assign Leave button"</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Chrome Browser to click the Assign Leave button" sap:VirtualizedContainerService.HintSize="778,1690" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="ed8d761c-f11e-4eb5-8dd8-21872245dd71" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <TryCatch DisplayName="Try Catch on Clicking Assign Leave Button" sap:VirtualizedContainerService.HintSize="744,1554" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch.Try>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Assign Leave'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ed8d761c-f11e-4eb5-8dd8-21872245dd71" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="71, 335, 50, 50" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='' aaname='                                                                                  Assign Leave                                     ' /&gt;" Guid="74f2545f-77f0-43b4-968f-748ae86edcb8" ImageBase64="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" InformativeScreenshot="7423af3e093a52c30b867ae249cbd31b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="Complete">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="46, 373, 100, 27" ElementType="Text" FriendlyName="'Assign Leave'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='                                                                                  Assign Leave                                     ' check:innerText='Assign Leave' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAfCAYAAAALO4jYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAXMSURBVGhD7ZhtTFtVHMZZYmLMnDNqsmTJjHMu0/hBjCbjwzTGLybOjIjRzAWX+DK2RGVAZ7YBG8gHExcQcHGgy6RENt2SYVQ2zXRZZToF5GVY+kJfKQXG214cslAcj/d/b0977r0HbLu1K5YPvzT33nPOfZ7/c/6HlrS/yjNAXJucjDt+vw9XrozKny6XC06nc05MdhfyHH7kXRjH1uFxPOkZwiqnHw+5/HjE7MDTn9XhI8PzGPpwJaZMOzH1ayECX6/H9ImXEWgrQaBjL6a/ewyOxg2oPN6INVVNWPb+Mdybfwh3v1WNJdnlWLyxEunbjThxtkP3fgZp5bWLvMWLhAd0+fIo+vv7ZOO9vb1z0m13oMbixjuuQbzkG8ajzgGs6PXh/t5+rDa14MVCA07nP4yp4sWY3v8Epn/IRaC9QgpqN6ZObkLgm+cw/lUGjtcVYn31USwvPYL7DIdwz7ZPsPT1Kix9rQoP5nyKvJqTaOk0CzUQpJU0k/YUCGgk4oCIDlsvGq1OFFs9eKHbjfROJx7ocmHVqXPYsMuA7wvSca3oTsy8twjXC5fgn48fx3TTVkz9VobJw+vwe/WzyN1XgTUlDVi2sx7LC+qwxlCPjMLDeGVfI8qPmnC2rRs2u134fiIc0EiqBOSFw+GAXSpKJFglWqx2nLLYcfC8DaWdduT90oXs6lpseXMjPs9dB3fRSlzfdTtmdizCdNFdCFSsxkBVOmrK3sC26i+QY/wRBQ2nUXbsZ9Q2ncO3ze1oloLp7rEK38lDWklzigQ0DJ/PI+9Mm80WNWarDV0S7RartPP/gLHhCLYXGJCzOQsN+U/hwt4VmNl9GwKFd+BM8VpUln+An5rPoa27Bx1/WnDebIFZmmsVrD0bpJU0k/b/fUCXLt1YQFqsViva29tRV9+AzTm5yN6UhS93PIPmvWtRlvcq6qUAaYxobqSwgEh7SgTU1+eWjw4q3M2ktbUVB2oPYsu7BXg7z4D9B2rQ0tIiHBsNpJU0p0xAXq9b3pkWi+Wm09PTI4dCYZnNZuGYaCGtpDkFAqJvQqyD4hNQPCCtpFn5G9Qn9BYvEhpQX58HExP0W8IrnesUUI+845MZ0khaSfPExJjsQeQtXiQ0oP5+n2xydHQAHo9L3pk2G53zlqSEtJFG0kqaSTt5EHmLFwkNaHxsDENDftnoyIhfMuuRznaXVAAn3O7kgjSRNtJIWkkzaScPIm/xIqEB/T0xgaHBwVBIV6+Oyuf6xYtDSQlpI40sHNJOHkTe4kVCAyLIIO1Cn88nfzOiX+j0b5TkxCtrJK2kOdHhEAkPaIHoWAgoyVkIKMmJISAPjFlpSEuTyKqDVzgmFs6g9KavyYjn2vEl+oAcdcgkszKZMDoEY2JiISARUQfkNWbK4ZTuKZE/M42J/WUdGykTkCd4vJXANKvp4P0QNDb83LSHfyYFbdLMC63H3hUcp9kQoY1i5Dp61gAiCEh1MvC6iFk8BefwmzSki803KboVoj9xoguImdhzRr5Wiq1+qXJPbYCNZ2IV8SwAFqC6iGqj4bC0AbG1dYVR8R8BaXQqazFfwXezuaqxWg+asUG/TLOqNhESVUCz7Q5+B/EdoisWv5tYaCH4ImqNh+fqOmgOLWHmDki3lqAzdF0k2hiaeboNHNSoq8scRBGQoGhsN/HG2T2OsFG2BkdoLl9EQUETEJAOVZcE11Z1ELe2dK2sEw6E36w8Yo1iIg9IUPgw4rM1bFzwnFtPEcwXkRXlFnUQjzYQXUDhTskkzdw7dB0UAxEHxExoC6C+ry+sIlK5nq2oyrW6iOqxbN34BKQtumpt9iw4N9QVXEDs3So93H2mKZbAIgyIFWiOTgiZDxdTQT2HmWeEC6otIr+OtIZRbTamgASExjMf2vsSKs1ZJSglXaqw2fpcxzO48AhVgBEQ1ZeEW0rQaLQG5ztJGxA7StQdc2Pn+XwkiTtIfyylWvcQ8+eIS0km8S+xl1hbuRwrMAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <uix:NClick.Timeout>
+                  <InArgument x:TypeArguments="x:Double">
+                    <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">intTimeout</CSharpValue>
+                  </InArgument>
+                </uix:NClick.Timeout>
+              </uix:NClick>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="710,1392" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Alternative Click Assign leave sequence" sap:VirtualizedContainerService.HintSize="704,1323" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="boolCheck" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Error Message" sap:VirtualizedContainerService.HintSize="662,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Could not find quick launch Assign Leave button\n Trying the alternative way to go to Assign Leave.."</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                    <ui:RetryScope DisplayName="Retrying to click the button" sap:VirtualizedContainerService.HintSize="662,1099" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                      <ui:RetryScope.ActivityBody>
+                        <ActivityAction>
+                          <Sequence sap:VirtualizedContainerService.HintSize="620,853" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Alternative way to click Assign Leave button " sap:VirtualizedContainerService.HintSize="578,444" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NHover DisplayName="Hover 'Leave'" sap:VirtualizedContainerService.HintSize="334,156" HoverTime="1" sap2010:WorkflowViewState.IdRef="NHover_1" InteractionMode="DebuggerApi" ScopeIdentifier="ed8d761c-f11e-4eb5-8dd8-21872245dd71" Version="V1">
+                                <uix:NHover.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="215, 171, 48, 40" FriendlyName="'Leave'" FullSelectorArgument="&lt;webctrl parentid='menu_leave_viewLeaveModule' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='menu_leave_viewLeaveModule' tag='B' type='' class='' aaname='Leave' check:innerText='Leave' /&gt;" Guid="9482b0ca-6bec-483b-9d5b-45a76657be70" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAsCAYAAAAq/ZsdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVGhD7ZNJcoMwEEV1LK+Sk3AUyxdIVbI2XMLgQ8TAFRh2nifw/gdJBknYqWCvSBuqXpWkbg2vJRiIfYNQ379BqO8fu1wuoAQryxKUGIT6ziDUdwahvjMI9Z1BqO8YQjE8Z4J5bif8N15cKPTgOE6DF9rx2NUxiRsb8zzERm6ZzzExxvJgYsx9vrDdhdqHkgfS+VKGz5Fb+bW0WNsugBS4Csv2zdxWATrCiqKAIqo25Qiyum+SIeDiQPZ45nM408ga04j19JxoWgk3ueZ69/cV+dzPrLEudBRSh9NPwqAlJCWNeFOEa9Uj0c4CcKttrGfwlND5fIYigiuE0rpvImIO3MW9mCJtRFxEcqw9R/dlblUIOZ4Kod/2fZyOQql8ItxP78R03Ba+LYJ6dkEr9+9iPUJHoYqFW1XfjJuSbWHVFzdmHVSuIcbtfdTt1jcreF6SnU4nKEK5SP1+NRx+qnKSmf1/8FlynVuR+ta/4H4n8MdVexrqnHqPsY+kGVOE4vas+Xa8K+x4PIIS7HA4gBL0hPb7PShBT2i324ESbLvdghJss9mAEvSE1us1KMFWqxUoQU9ouVyCEqz4fAMlWPH1Dkqw4mMEShATGuEHX/iZviMAmfgAAAAASUVORK5CYII=" InformativeScreenshot="f78419aa444cd12d16f0e9fae4ba545c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                </uix:NHover.Target>
+                                <uix:NHover.Timeout>
+                                  <InArgument x:TypeArguments="x:Double">
+                                    <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">intTimeout</CSharpValue>
+                                  </InArgument>
+                                </uix:NHover.Timeout>
+                              </uix:NHover>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'Assign Leave'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ed8d761c-f11e-4eb5-8dd8-21872245dd71" Version="V1">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="559, 215, 104, 30" ElementType="Text" FriendlyName="'Assign Leave'" FullSelectorArgument="&lt;webctrl id='menu_leave_assignLeave' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='menu_leave_assignLeave' tag='A' type='' class='' aaname='Assign Leave' check:innerText='Assign Leave' /&gt;" Guid="628de284-017b-4ff8-ad4e-1ddd444fb385" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAiCAYAAAC6NDzRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJpSURBVGhD7ZpBVsMgEIa9pLpQT6Qeou05ag/RLHKAHCF7hIGQHxiwSaoFO+P7n4YhZGY+hrjIQ9/3StSOBFhjCoC9f3yql9c39fj0LKpAhoVhgow8MOPgbhLdXgjNA5POqleGTQKMmyiqRwKsMQmwxiTAGpMAa0wCrDEJsMZ0JWBfalDaxk7tWf8K7To16p/zjvFt1L4blRq+WF/tugowW4CBoA0nfk5NunNgB3U2+WtQRyKWFoLGvQ3qeIkv7rATTNSdfIZnWQB6TP+abOwO/hmxfgZmc/IWnxwYC5mLmz0VzOmTyUPb0g2+HRgF6QKmYEIgVBxIGK9LviB5+huSm5JGYOYy8OePU5qfBWZhIfBgIyZru9cB+dN7af6UU1wfFnBZm4GFXZUGHENBlXyYTFpg1wFuLF3HFjG3e4vAsMBeUZdEwhrEsRifrYeNOY6pGAujjcDSRHLFsxYnXfABsDnp2V8q0hZg5GONiw9sWi/oGqwP5hrZXwHLJ8cVy3UFWXhssr5bAks6DASgpvUxluCUCbq1HNOl2gAMAmPG87umFDj4AFha4PAZ1wSWvGcicfeGwOZ4zD9Gc31y9Vqm9cCC1o8ESSfFvNAXrO92tQdA88zALwDjNlwhZro2hvOZLpzXwZoth7gaGO2qoEgoWzAbiCuAtzTg2cAXb4gJkjH9XNy9q4Bx5otu758NOy6KWd9j1+Pm4JhV/OylHbca2K3FvdfuQU0ASzqodBz/czUBrHys3pcaASaaJMAakwBrTAKsMSXA5EPSesV+SCqfatcr9lPtCZp0Wj0yLBCWUQBMVL8EWFPq1TeK5nZS/qoj8AAAAABJRU5ErkJggg==" InformativeScreenshot="dc6f293ed34a30179dd7685af4dbeaf5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="215, 171, 48, 40" FriendlyName="'Leave'" FullSelectorArgument="&lt;webctrl parentid='menu_leave_viewLeaveModule' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='menu_leave_viewLeaveModule' tag='B' type='' class='' aaname='Leave' check:innerText='Leave' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAsCAYAAAAq/ZsdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVGhD7ZRNboMwEEZ7J/btXcI5UI7QLskxEHeIOAK7LJPwD2Hvlg8TxoY0caVKZmSkJwEeY7+ZwW+C2cVPKE1TsWVOp5NUGa/NCw1QKRZCA9PFRqjve8BG6Ha7ASdkK07IdpyQ7Tgh23FCtrMiFIvA80V4VAO3ghMCUSA8z7sTROp4vJ/HwD4m8wIRk9j0GAqfvEsOPplrnlhzIX1T2NAcD5ldKBIlfpIevq0mAAJSGPeLuVoCnmAolIhwt6wI3dQSVQLC91j6vfV1h3j/kCjvfqPrOvCi0Li5uSUImpDaOiQJNOu03XBPvkf4dyG9QpRZZGoVfc78rFRWa92/0rYtMGq5xxlba8llEsa2C7XY58l6BUOhH9AydJxK6sLj81AxZaPyoNBPsbG69BAwl3wgNG5CZV5c/z+Uimn/QhBJKeUfk2vQE02iH/mmFWuaBhChbVPXNWAjVFUVcEK2UpYlcEK2UhQFYCOU5zlgI5RlGXBCtnK9XgEbocvlApyQrZzPZ8BGqPt8B3yEvj4AG6EJZkKp+AZpewQt+TBc4QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                                <uix:NClick.Timeout>
+                                  <InArgument x:TypeArguments="x:Double">
+                                    <CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">intTimeout</CSharpValue>
+                                  </InArgument>
+                                </uix:NClick.Timeout>
+                              </uix:NClick>
+                            </Sequence>
+                            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Leave'" sap:VirtualizedContainerService.HintSize="578,277" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="ed8d761c-f11e-4eb5-8dd8-21872245dd71" Version="V1">
+                              <uix:NCheckState.IfExists>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">
+                                      <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">boolCheck</CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">
+                                      <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">boolCheck</CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable Accuracy="1" BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/leave/assignLeave" DesignTimeRectangle="215, 171, 48, 40" FriendlyName="'Leave'" FullSelectorArgument="&lt;webctrl parentid='menu_leave_viewLeaveModule' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='menu_leave_viewLeaveModule' tag='B' type='' class='' aaname='Leave' check:innerText='Leave' /&gt;" Guid="628b4196-69f2-44f5-953e-a9a3814dfab5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAsCAYAAAAq/ZsdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGrSURBVGhD7ZdLasMwEEBzrKyam/REhYYcoUcIdJ0DeJnuA9n4/3fAmNhqPB7XI1lpokJBFhp4INuyrTczFsmKGRYzoa4ucaR/tLmLoylWxduaLZbthl0+Xlnz9Yk6SxdCeqkxjBDqKzWGGUI3qqoCjBEqyxKwQrpihXTHCumOFdIdK6Q7EqE9a1nJrgd+4lKwQsDxhD/Sh2iP/PUmxgtjxHty34k1ZG5xcFhHztVn+k9ZPbHqQuKiYEHTfJCpHVZz80fp/tl8AkAAhWE8u1dIwAMUhXbsWs8rQhc1h5cA4Z+59Hny9/bzu/OOO/crRQE8KTQsThqCEN86JAk067TdYCyPfxcSK0SZRMZWEe+ZjrnKCq37V/I8B5Ra7n7GZC05T8LQdo4w93GynkFR6Aa0DL1OJUXh4bgPbqG4UYi72FBdugmoS94RksX0cvH74ComfAvtEaW4bwzfQXc0RNzyVSuWZRlAhJZNmqaAMUJJkgBWSFfiOAaskK5EUQQYIxSGIWCMUBAEgBXSFd/3AWOEPM8DrJCuuK4LGCNUvL8A5ghtN4A5QohhQmv2DY2puD6Za0xbAAAAAElFTkSuQmCC" InformativeScreenshot="0b36e376db995cd546586bd6c9a288c1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                              </uix:NCheckState.Target>
+                            </uix:NCheckState>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean">
+                          <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="CheckTrue_1">
+                            <ui:CheckTrue.Expression>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">boolCheck</CSharpValue>
+                              </InArgument>
+                            </ui:CheckTrue.Expression>
+                          </ui:CheckTrue>
+                        </ActivityFunc>
+                      </ui:RetryScope.Condition>
+                    </ui:RetryScope>
+                  </Sequence>
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+            <TryCatch.Finally>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"Navigation successful!"</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </TryCatch.Finally>
+          </TryCatch>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.InUiElement>
+        <InArgument x:TypeArguments="ui:UiElement">
+          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">io_ChromeWindow</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.InUiElement>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

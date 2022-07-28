@@ -1,0 +1,390 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginToWebsite" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_uiChromeWindow" Type="InOutArgument(ui:Browser)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>820,1620</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="64">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LoginToWebsite" sap:VirtualizedContainerService.HintSize="676,1555" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Workflow start Log Message" sap:VirtualizedContainerService.HintSize="634,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">"Entering credentials to login.."</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Chrome Browser" sap:VirtualizedContainerService.HintSize="634,1332" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="4ca14ab6-5677-4706-a7e3-18998ce2e8a5" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <TryCatch sap2010:Annotation.AnnotationText="In this sequence, the robot tries to enter username and password into the fields and login. If an error occured, the robot will try to re-navigate to the website, check the input field existance and try again." DisplayName="Login entry sequence with exception handling" sap:VirtualizedContainerService.HintSize="438,375" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch.Try>
+              <Sequence DisplayName="Login entry" sap:VirtualizedContainerService.HintSize="376,918" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Workflow startup Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+                  <ui:LogMessage.Message>
+                    <InArgument x:TypeArguments="x:Object">
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">"Logging in to the website"</CSharpValue>
+                    </InArgument>
+                  </ui:LogMessage.Message>
+                </ui:LogMessage>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT txtUsername'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="4ca14ab6-5677-4706-a7e3-18998ce2e8a5" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="474, 493, 232, 16" ElementType="InputBox" FriendlyName="'INPUT txtUsername'" FullSelectorArgument="&lt;webctrl id='txtUsername' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txtUsername' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="d727c778-383a-4d48-8411-4791fdcea65d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOwAAAAUCAYAAACOEtFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJWSURBVHhe7ZvLiupAEIbz9nmB5AUS3yDxFUwEwZUiaI+4ErwbFy7rdFXfYpgz4wEPJPAvPipVXZXugfmIOmO03W7pcrnQ+XxGRETseYxmsxldr1cAwACAsAAMCBH2drsBAAYAhAVgQIiwTdPQ/X7/PW5KSuOUyk2rvi50Laf6pzlERMSPRC/sW7SEfa1pYdt9AID/ggj7eDzeQ1lhVbeW01TyKeVxTLElr11fu+7mv6hMdc8otzXuSXWedvo0ske4bzr+CvPjsJbXpiZ9o6nd+0HTUXfW3heAgfHRJ6waa9lGtanXWsSkJNUoKhOWyfZ36r6/qUXqdKwkr1kyu6bqWvf/ZV6u7d7ubNzz3Zlkj875ARgQn31JLNfmSeYFtSK6J5yB72GEc4K6Pjf3Kpqmde+2sH7ei+x6zZlEfL+vIewJwLAQYfkN7XvUlGnZinWrJh86ZfKhk69VmZWD69/MCIoKFq5UNue+mLLKrKvSCMvXRjq7B987KUh1531dX7fOxLNhDwCGzT8K25XMymRFYcn8mpfGzDj5jMyh/q6wri/s956wch8ne2cPAIaGCNv+Ow//N8XPeSW/9OElZkaVX98YOe1aNnHz7ZlEP21Db1Ks7azpySZmvw2LlldmfuKe2Hq9MDJW3Xnu0cKuud8Ky+fi+SoPZwr7GX7/eZEj70/uhXULiIiI/Y0iLH8LgOGiu0aOHHn/8hdhAQD9JprP53Q4HOT7dgCAfhOtViva7XZ0Op0AAD0n2u/3tFgs6Hg8AgB6TvR8Pmm5XJJSSl4aAwD6yoH+ALEYURef5otWAAAAAElFTkSuQmCC" InformativeScreenshot="631ddabbf248b85e3db1bc68f4903184.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                  <uix:NTypeInto.Text>
+                    <InArgument x:TypeArguments="x:String">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">new System.Net.NetworkCredential("Admin","admin123").UserName</CSharpValue>
+                    </InArgument>
+                  </uix:NTypeInto.Text>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT txtPassword'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" IsPassword="True" ScopeIdentifier="4ca14ab6-5677-4706-a7e3-18998ce2e8a5" Version="V1">
+                  <uix:NTypeInto.SecureText>
+                    <InArgument x:TypeArguments="ss:SecureString">
+                      <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">new System.Net.NetworkCredential("Admin","admin123").SecurePassword</CSharpValue>
+                    </InArgument>
+                  </uix:NTypeInto.SecureText>
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="474, 544, 232, 16" ElementType="InputBoxPassword" FriendlyName="'INPUT txtPassword'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="ce186c7a-5ce8-4c12-9f7a-15ea235dc1cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOwAAAAUCAYAAACOEtFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK1SURBVHhe7ZtbjqpAEIbdPRuQDYA7oN3C0CYmPhkfBBLjk3fUBdRUVXcDGhI9J+cBTv6HL2XXpWGS+abRmZlUVUXX6xUAMAImy+WytwAAGB4qbF3XdLvdEBERBx4bYQEAw0eFvd/vAIAR8GfCbjOKo4iiFxKyfb0DojQxRTPbWwNgTKiwj8fjOwrDwsZkijZnZywty/DSNzDKuRO2rwbAmFBhn8+nLj7G0gtbdvI2pSg2VDb19vSN55X2VSJMyE8NVbqfpbTTm1qel71CXX84pGT1OgvuDdctycRhzv3weD4rMlPeY8bzoU/28j3pzAn78etDRBx4bIT9io6wIbfQE3ahryu7UNm05kWuOrKpWCxbarlXTz0319vLORFQet11U1q8XU/nNO/2bfK6j7tOuGZbA2C8/MUjMX/zv+BOwd4ePi3l5NXH5s76vU9OVzfPp6eclLy2fCoaayidl+601Efatu765ZTmvsLlY+mVvBc53BceicH/QiOsvKH9GDvvYfvqTsxERbnniRO0qTupRFARq5mTPhXXzckHRPHcUjbLWG5LyTQjw/smufSXlHlh3TzXvbCSb/ZVYf198LorbHNdRMQRRhVWFvI7no9RPyWOKdv210XY2BS6zlM5UTMq6pylSij3fZKPTUmFiMmx3dd92lz/iOhcS3Pfz695nW3beZFP51R2mfPChv3uIrKTvK4LrUV+v+79IiKOLaqwsviKRtiemiCy+cfcxDgJRdRu3kks/V6k0P8T9hHBnfiyFrHbmfe5cC8uF2Ze7yWmhKUXYZsaACNFhZU/ewIADB8IC8CIUGH7/isgcLlcevMB1FHvywdQ/7f1yWq1otPp1BQQERGHGyebzYZ2ux2dz2cAwMCZ7Pd7Wq/XesoCAIbNRD4qFmHLsqTj8UiHwwEREXGQ8Ui/MXFaLbmzq44AAAAASUVORK5CYII=" InformativeScreenshot="9d4bb62ccd45ba70716f47ed802e86ca.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NClick ClickType="Single" DisplayName="Click 'LOGIN'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4ca14ab6-5677-4706-a7e3-18998ce2e8a5" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="474, 585, 94, 26" ElementType="Button" FriendlyName="'LOGIN'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button' aaname='LOGIN' check:text='LOGIN' /&gt;" Guid="2b1768eb-a475-4cec-ac70-3a455f79c305" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAeCAYAAADXRcu0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAU7SURBVGhD7VZZTxtnFJ2/0Up96UOlqlL70ErpQyJ1S9KQQkkbSPOQFqmLukrtU5K3VJGqqlUTJU0rRaGLmoSEJWYrSSGUFoUl4NokYBuMjY2JjTG28W5jCDr9lpnxeBgXi9rAw3zS4Xxn7v3uzJw7F1kIh8PQsf3QG7FDIIRCobwLut4enTcR0YV7SPh6kPK1I+1tQ9pHoPOmOOVtR2L+NvNU6XEh8IkIuBCb60DS04jEbKPOJWbqLfWYel0IrBGxWQPirss6yoiY28C+fOq3Fgth7yii9p8QsdcjOi2yrsuiw16jPAFqCEuOJizZftSxFXA055kvTQRrRHD8ewTvnyU4g+C4yLouiw5NEK+DwbxmSFpYMH6JRfPXMgKKva5LqwPGU3lNUELw9NZhfugk/COntgzxWAZ0rS5qxzm6kX3I0nIrY9bIy9VTLmXtNAtnkPUoNbAW65Zz/B4X1ujFAvf4v/ANHofn9jvyBKhZcHXVwn2zFp4/P8D84En4Bk4QPkEOUi6PjkXFRgQK5RuxyhKciElxt5MbRa/J+V1YZokZLLtz56X6a9EuplNpnpN18zjXdAWQUtdPG7lm9Qs9X/Hae+c45nrfg4t47L55RJ4ANQRn+yFImOmsgfuPOsz1fYa5vz7H3N9fkD1huqdcIh2JcCdW/NrxZIo5goxTFfcvsHNrkTamc3Xyz29Uj2txpYZ5vmOaN0LS/1GvGO3p/RiuW2/L3jJ0vMEmQAvCtKES04YqAiW/Tg7VYKbrGNzd72O25yOCD0vGS2HRQJ9WfAArNLg6haV15wd5LDlI9i3IsGnwI7EuL58TSZpHGmFXammJ1+1TvBHJgXXni2XXrXfh7DwKR9ubKj9zrDSfToLciKmmA9gQzQdhv1GN6dbDcLQfJQ2qy+F3xb5IHQrxT3LlgUbcauOGJPrl/Fy8nzdixYZQ3l6Ro3G/eIImppC2qXTIRzf8XjbVfRXntbSz8xgxvJaYewj2lkpt3zSgbIQSgu3aXmwK1/djsrGCNIk8REs17AbyFbSSB2t7a0MEg7wRWY9GfMIiGtK3PtbWhyyNrVgQzNuLcY+XXsktMRYTjU9N8Dyl5nvyLEHVfVuPENSw97KT95tqrsJk00FMkvfW9KNIaDWBQpi4/AIsBKXlFzFx5SVYr7wMy9VXYL26F5aGfbA27GdYCPD/DcuuClivV5CGVsJGMNlYRbhHNPg+Ak1EE0zK3INlMbbQ9DNSbCQeIKLMY3UUeY2vIRKnIomk+QCs115FJEZ1AknTPlhMY8j7cRbrKuL9Ns+Li4vMeDUL47/uxlZj3s8/w2WHdnwpSqMJJEZVMccsO/fQf4HoPbJeX6eTNyJrwjzR6nraWlzRTkWd0kOaADWEsfpduFf/PLaSffO8ERl7obwO8mOTLjdC0vW7Rv7lZo3wyXnnkWDjQ0y9K50/J14ji+XuQjhCRZzk8HNqnbsfWZF2sY5Ur7RMJ0ALgvniszBffI5g69jrY/8rNJYLITnvLOKSodIiP1uLrpcdhVeMh0Tj40PamtaRa7B75NcvJasngTaBTYTp0m4Yf3gGxgtP61xmNl/as24SJAiW1k8weu4pjBCMni/AerwkcWvbp5pNoBDcphsYPvMEhr8j0Lms7DYZNJtAIdA/Y78dxuA3j2OIQOfyMPVYbb4SQiAQgNdpwj+/VOPOV4/pKAOot9Rj6nUhsEZIXZkZbcJYQx0Gvn0S/acfIXhUZAm6LlZTD6mXMyONeV++GpL/rBE6th/yROi8vaxPxA6B3ogdgQD+BVZXJ09hxWgVAAAAAElFTkSuQmCC" InformativeScreenshot="efb7bda504fb7557228f139c9a724022.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </Sequence>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Exception handling sequence" sap:VirtualizedContainerService.HintSize="560,963" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Default="False" Name="bLogin" />
+                      <Variable x:TypeArguments="x:Boolean" Default="False" Name="bPassword" />
+                      <Variable x:TypeArguments="x:Boolean" Default="False" Name="bUsername" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:RetryScope ContinueOnError="False" DisplayName="Retrying 3 times to input credentials" sap:VirtualizedContainerService.HintSize="518,871" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:05">
+                      <ui:RetryScope.ActivityBody>
+                        <ActivityAction>
+                          <Sequence DisplayName="Retry sequence" sap:VirtualizedContainerService.HintSize="476,625" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log &quot;Cannot find an object.. retrying..&quot;" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error">
+                              <ui:LogMessage.Message>
+                                <InArgument x:TypeArguments="x:Object">
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"Cannot find an corresponding input fields, retrying.."</CSharpValue>
+                                </InArgument>
+                              </ui:LogMessage.Message>
+                            </ui:LogMessage>
+                            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Chrome Browser" sap:VirtualizedContainerService.HintSize="434,402" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="d42ac393-3fa9-4873-9246-c0e9a69fc7fb" Version="V2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Check and Login sequences" sap:VirtualizedContainerService.HintSize="242,266" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence DisplayName="Check element sequence" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:Int32" Name="intTimeout">
+                                          <Variable.Default>
+                                            <Literal x:TypeArguments="x:Int32" Value="5" />
+                                          </Variable.Default>
+                                        </Variable>
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NGoToUrl DisplayName="Go to the opensource-demo.orangehrmlive.com" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://opensource-demo.orangehrmlive.com/" Version="V1" />
+                                      <ui:UiElementExists DisplayName="Check if Username input exists" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                                        <ui:UiElementExists.Exists>
+                                          <OutArgument x:TypeArguments="x:Boolean">
+                                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">bUsername</CSharpReference>
+                                          </OutArgument>
+                                        </ui:UiElementExists.Exists>
+                                        <ui:UiElementExists.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="271e2b2a-f5cd-4ffe-a86d-0347d47673ed" InformativeScreenshot="9b8d8267aa7bfc15489a4c1dadc4a10c" Selector="&lt;webctrl id='txtUsername' tag='INPUT' type='text' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32">
+                                                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">intTimeout * 1000</CSharpValue>
+                                              </InArgument>
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:UiElementExists.Target>
+                                      </ui:UiElementExists>
+                                      <ui:UiElementExists DisplayName="Check if Password input exists" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                                        <ui:UiElementExists.Exists>
+                                          <OutArgument x:TypeArguments="x:Boolean">
+                                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">bPassword</CSharpReference>
+                                          </OutArgument>
+                                        </ui:UiElementExists.Exists>
+                                        <ui:UiElementExists.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="271e2b2a-f5cd-4ffe-a86d-0347d47673ed" InformativeScreenshot="5f7912fbaaaedc06ed58a5dca1c2d231" Selector="&lt;webctrl tag='INPUT' type='password' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32">
+                                                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">intTimeout * 1000</CSharpValue>
+                                              </InArgument>
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:UiElementExists.Target>
+                                      </ui:UiElementExists>
+                                      <ui:UiElementExists DisplayName="Check if Login button exists" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+                                        <ui:UiElementExists.Exists>
+                                          <OutArgument x:TypeArguments="x:Boolean">
+                                            <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">bLogin</CSharpReference>
+                                          </OutArgument>
+                                        </ui:UiElementExists.Exists>
+                                        <ui:UiElementExists.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="271e2b2a-f5cd-4ffe-a86d-0347d47673ed" InformativeScreenshot="d267f5c88f3b54daf6be18bc7c984bee" Selector="&lt;webctrl tag='INPUT' type='submit' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32">
+                                                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">intTimeout * 1000</CSharpValue>
+                                              </InArgument>
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:UiElementExists.Target>
+                                      </ui:UiElementExists>
+                                    </Sequence>
+                                    <Sequence DisplayName="Login entry" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Username Re-entry" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,217" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="DebuggerApi" ScopeIdentifier="4ca14ab6-5677-4706-a7e3-18998ce2e8a5" Version="V1">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="474, 493, 232, 16" ElementType="InputBox" FriendlyName="'INPUT txtUsername'" FullSelectorArgument="&lt;webctrl id='txtUsername' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txtUsername' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="d727c778-383a-4d48-8411-4791fdcea65d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOwAAAAUCAYAAACOEtFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJWSURBVHhe7ZvLiupAEIbz9nmB5AUS3yDxFUwEwZUiaI+4ErwbFy7rdFXfYpgz4wEPJPAvPipVXZXugfmIOmO03W7pcrnQ+XxGRETseYxmsxldr1cAwACAsAAMCBH2drsBAAYAhAVgQIiwTdPQ/X7/PW5KSuOUyk2rvi50Laf6pzlERMSPRC/sW7SEfa1pYdt9AID/ggj7eDzeQ1lhVbeW01TyKeVxTLElr11fu+7mv6hMdc8otzXuSXWedvo0ske4bzr+CvPjsJbXpiZ9o6nd+0HTUXfW3heAgfHRJ6waa9lGtanXWsSkJNUoKhOWyfZ36r6/qUXqdKwkr1kyu6bqWvf/ZV6u7d7ubNzz3Zlkj875ARgQn31JLNfmSeYFtSK6J5yB72GEc4K6Pjf3Kpqmde+2sH7ei+x6zZlEfL+vIewJwLAQYfkN7XvUlGnZinWrJh86ZfKhk69VmZWD69/MCIoKFq5UNue+mLLKrKvSCMvXRjq7B987KUh1531dX7fOxLNhDwCGzT8K25XMymRFYcn8mpfGzDj5jMyh/q6wri/s956wch8ne2cPAIaGCNv+Ow//N8XPeSW/9OElZkaVX98YOe1aNnHz7ZlEP21Db1Ks7azpySZmvw2LlldmfuKe2Hq9MDJW3Xnu0cKuud8Ky+fi+SoPZwr7GX7/eZEj70/uhXULiIiI/Y0iLH8LgOGiu0aOHHn/8hdhAQD9JprP53Q4HOT7dgCAfhOtViva7XZ0Op0AAD0n2u/3tFgs6Hg8AgB6TvR8Pmm5XJJSSl4aAwD6yoH+ALEYURef5otWAAAAAElFTkSuQmCC" InformativeScreenshot="631ddabbf248b85e3db1bc68f4903184.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                        </uix:NTypeInto.Target>
+                                        <uix:NTypeInto.Text>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">new System.Net.NetworkCredential("Admin","admin123").UserName</CSharpValue>
+                                          </InArgument>
+                                        </uix:NTypeInto.Text>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Password Re-entry" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" IsPassword="True" ScopeIdentifier="4ca14ab6-5677-4706-a7e3-18998ce2e8a5" Version="V1">
+                                        <uix:NTypeInto.SecureText>
+                                          <InArgument x:TypeArguments="ss:SecureString">
+                                            <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">new System.Net.NetworkCredential("Admin","admin123").SecurePassword</CSharpValue>
+                                          </InArgument>
+                                        </uix:NTypeInto.SecureText>
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="474, 544, 232, 16" ElementType="InputBoxPassword" FriendlyName="'INPUT txtPassword'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="ce186c7a-5ce8-4c12-9f7a-15ea235dc1cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOwAAAAUCAYAAACOEtFgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK1SURBVHhe7ZtbjqpAEIbdPRuQDYA7oN3C0CYmPhkfBBLjk3fUBdRUVXcDGhI9J+cBTv6HL2XXpWGS+abRmZlUVUXX6xUAMAImy+WytwAAGB4qbF3XdLvdEBERBx4bYQEAw0eFvd/vAIAR8GfCbjOKo4iiFxKyfb0DojQxRTPbWwNgTKiwj8fjOwrDwsZkijZnZywty/DSNzDKuRO2rwbAmFBhn8+nLj7G0gtbdvI2pSg2VDb19vSN55X2VSJMyE8NVbqfpbTTm1qel71CXX84pGT1OgvuDdctycRhzv3weD4rMlPeY8bzoU/28j3pzAn78etDRBx4bIT9io6wIbfQE3ahryu7UNm05kWuOrKpWCxbarlXTz0319vLORFQet11U1q8XU/nNO/2bfK6j7tOuGZbA2C8/MUjMX/zv+BOwd4ePi3l5NXH5s76vU9OVzfPp6eclLy2fCoaayidl+601Efatu765ZTmvsLlY+mVvBc53BceicH/QiOsvKH9GDvvYfvqTsxERbnniRO0qTupRFARq5mTPhXXzckHRPHcUjbLWG5LyTQjw/smufSXlHlh3TzXvbCSb/ZVYf198LorbHNdRMQRRhVWFvI7no9RPyWOKdv210XY2BS6zlM5UTMq6pylSij3fZKPTUmFiMmx3dd92lz/iOhcS3Pfz695nW3beZFP51R2mfPChv3uIrKTvK4LrUV+v+79IiKOLaqwsviKRtiemiCy+cfcxDgJRdRu3kks/V6k0P8T9hHBnfiyFrHbmfe5cC8uF2Ze7yWmhKUXYZsaACNFhZU/ewIADB8IC8CIUGH7/isgcLlcevMB1FHvywdQ/7f1yWq1otPp1BQQERGHGyebzYZ2ux2dz2cAwMCZ7Pd7Wq/XesoCAIbNRD4qFmHLsqTj8UiHwwEREXGQ8Ui/MXFaLbmzq44AAAAASUVORK5CYII=" InformativeScreenshot="9d4bb62ccd45ba70716f47ed802e86ca.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                        </uix:NTypeInto.Target>
+                                      </uix:NTypeInto>
+                                      <uix:NClick ClickType="Single" DisplayName="Reclicking Login Button" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4ca14ab6-5677-4706-a7e3-18998ce2e8a5" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://opensource-demo.orangehrmlive.com/index.php/dashboard" DesignTimeRectangle="474, 585, 94, 26" ElementType="Button" FriendlyName="'LOGIN'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='button' aaname='LOGIN' check:text='LOGIN' /&gt;" Guid="2b1768eb-a475-4cec-ac70-3a455f79c305" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAeCAYAAADXRcu0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAU7SURBVGhD7VZZTxtnFJ2/0Up96UOlqlL70ErpQyJ1S9KQQkkbSPOQFqmLukrtU5K3VJGqqlUTJU0rRaGLmoSEJWYrSSGUFoUl4NokYBuMjY2JjTG28W5jCDr9lpnxeBgXi9rAw3zS4Xxn7v3uzJw7F1kIh8PQsf3QG7FDIIRCobwLut4enTcR0YV7SPh6kPK1I+1tQ9pHoPOmOOVtR2L+NvNU6XEh8IkIuBCb60DS04jEbKPOJWbqLfWYel0IrBGxWQPirss6yoiY28C+fOq3Fgth7yii9p8QsdcjOi2yrsuiw16jPAFqCEuOJizZftSxFXA055kvTQRrRHD8ewTvnyU4g+C4yLouiw5NEK+DwbxmSFpYMH6JRfPXMgKKva5LqwPGU3lNUELw9NZhfugk/COntgzxWAZ0rS5qxzm6kX3I0nIrY9bIy9VTLmXtNAtnkPUoNbAW65Zz/B4X1ujFAvf4v/ANHofn9jvyBKhZcHXVwn2zFp4/P8D84En4Bk4QPkEOUi6PjkXFRgQK5RuxyhKciElxt5MbRa/J+V1YZokZLLtz56X6a9EuplNpnpN18zjXdAWQUtdPG7lm9Qs9X/Hae+c45nrfg4t47L55RJ4ANQRn+yFImOmsgfuPOsz1fYa5vz7H3N9fkD1huqdcIh2JcCdW/NrxZIo5goxTFfcvsHNrkTamc3Xyz29Uj2txpYZ5vmOaN0LS/1GvGO3p/RiuW2/L3jJ0vMEmQAvCtKES04YqAiW/Tg7VYKbrGNzd72O25yOCD0vGS2HRQJ9WfAArNLg6haV15wd5LDlI9i3IsGnwI7EuL58TSZpHGmFXammJ1+1TvBHJgXXni2XXrXfh7DwKR9ubKj9zrDSfToLciKmmA9gQzQdhv1GN6dbDcLQfJQ2qy+F3xb5IHQrxT3LlgUbcauOGJPrl/Fy8nzdixYZQ3l6Ro3G/eIImppC2qXTIRzf8XjbVfRXntbSz8xgxvJaYewj2lkpt3zSgbIQSgu3aXmwK1/djsrGCNIk8REs17AbyFbSSB2t7a0MEg7wRWY9GfMIiGtK3PtbWhyyNrVgQzNuLcY+XXsktMRYTjU9N8Dyl5nvyLEHVfVuPENSw97KT95tqrsJk00FMkvfW9KNIaDWBQpi4/AIsBKXlFzFx5SVYr7wMy9VXYL26F5aGfbA27GdYCPD/DcuuClivV5CGVsJGMNlYRbhHNPg+Ak1EE0zK3INlMbbQ9DNSbCQeIKLMY3UUeY2vIRKnIomk+QCs115FJEZ1AknTPlhMY8j7cRbrKuL9Ns+Li4vMeDUL47/uxlZj3s8/w2WHdnwpSqMJJEZVMccsO/fQf4HoPbJeX6eTNyJrwjzR6nraWlzRTkWd0kOaADWEsfpduFf/PLaSffO8ERl7obwO8mOTLjdC0vW7Rv7lZo3wyXnnkWDjQ0y9K50/J14ji+XuQjhCRZzk8HNqnbsfWZF2sY5Ur7RMJ0ALgvniszBffI5g69jrY/8rNJYLITnvLOKSodIiP1uLrpcdhVeMh0Tj40PamtaRa7B75NcvJasngTaBTYTp0m4Yf3gGxgtP61xmNl/as24SJAiW1k8weu4pjBCMni/AerwkcWvbp5pNoBDcphsYPvMEhr8j0Lms7DYZNJtAIdA/Y78dxuA3j2OIQOfyMPVYbb4SQiAQgNdpwj+/VOPOV4/pKAOot9Rj6nUhsEZIXZkZbcJYQx0Gvn0S/acfIXhUZAm6LlZTD6mXMyONeV++GpL/rBE6th/yROi8vaxPxA6B3ogdgQD+BVZXJ09hxWgVAAAAAElFTkSuQmCC" InformativeScreenshot="efb7bda504fb7557228f139c9a724022.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OrangeHRM' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                    </Sequence>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.InUiElement>
+                                <InArgument x:TypeArguments="ui:UiElement">
+                                  <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">io_uiChromeWindow</CSharpValue>
+                                </InArgument>
+                              </uix:NApplicationCard.InUiElement>
+                              <uix:NApplicationCard.OutUiElement>
+                                <OutArgument x:TypeArguments="ui:UiElement">
+                                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">io_uiChromeWindow</CSharpReference>
+                                </OutArgument>
+                              </uix:NApplicationCard.OutUiElement>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="0, 0, 0, 0" />
+                              </uix:NApplicationCard.TargetApp>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean">
+                          <ui:CheckTrue DisplayName="Check if all input fields exist" ErrorMessage="Cannot find input fields" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="CheckTrue_1">
+                            <ui:CheckTrue.Expression>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">bUsername == true &amp;&amp; bPassword == true &amp;&amp; bLogin == true</CSharpValue>
+                              </InArgument>
+                            </ui:CheckTrue.Expression>
+                          </ui:CheckTrue>
+                        </ActivityFunc>
+                      </ui:RetryScope.Condition>
+                    </ui:RetryScope>
+                  </Sequence>
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+            <TryCatch.Finally>
+              <ui:LogMessage DisplayName="Success Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">"Logged in successfully!"</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+            </TryCatch.Finally>
+          </TryCatch>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.InUiElement>
+        <InArgument x:TypeArguments="ui:UiElement">
+          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">io_uiChromeWindow</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.InUiElement>
+      <uix:NApplicationCard.OutUiElement>
+        <OutArgument x:TypeArguments="ui:UiElement">
+          <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">io_uiChromeWindow</CSharpReference>
+        </OutArgument>
+      </uix:NApplicationCard.OutUiElement>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
